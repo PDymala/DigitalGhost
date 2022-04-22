@@ -20,13 +20,16 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+
+# Yes i know, it shouldnt be here
 SECRET_KEY = 'fxfwao!b&53)8l$t3nc(+)9^63t%b09f_dn@jx6e_(ghhkbgh5'
 
+# https://stackoverflow.com/questions/60794011/how-to-switch-off-the-django-debug-screen
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 # Change this to your production URL for deployment
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['https://digital-ghost.diplabs.app/']
 
 
 # Application definition
