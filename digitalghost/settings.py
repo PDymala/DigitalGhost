@@ -29,8 +29,8 @@ SECRET_KEY = 'fxfwao!b&53)8l$t3nc(+)9^63t%b09f_dn@jx6e_(ghhkbgh5'
 DEBUG = False
 
 # Change this to your production URL for deployment
-ALLOWED_HOSTS = ['https://digital-ghost.diplabs.app/']
-
+ALLOWED_HOSTS = ['digital-ghost.diplabs.app', 'localhost', 'digital-ghost-vpcuqkwkfq-ew.a.run.app']
+CSRF_TRUSTED_ORIGINS=['https://*.digital-ghost.diplabs.app']
 
 # Application definition
 

@@ -1,12 +1,12 @@
-from django.http import HttpResponse
-from django.shortcuts import render
-
+import base64
+import io
 import urllib.request
+
 import cv2
 import numpy as np
 from PIL import Image
-import io
-import base64
+from django.shortcuts import render
+
 
 def detector(request):
     if request.method == 'POST':
@@ -15,6 +15,7 @@ def detector(request):
             # url = "https://storage.googleapis.com/diplabs/digital_ghost/assets/img/face43580.bmp"
 
             url_response = urllib.request.urlopen(url)
+
             img_array = np.array(bytearray(url_response.read()), dtype=np.uint8)
             img = cv2.imdecode(img_array, -1)
             face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
